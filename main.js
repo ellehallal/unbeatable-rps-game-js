@@ -44,21 +44,6 @@ const convertToUp = (word) => {
 };
 
 
-// Output for user win
-const win = (userChoice, computerChoice) => {
-  userScore++;
-  userScoreSpan.innerHTML = userScore;
-  const randomWin = ["beats", "smashes", "destroys", "obliterates"];
-  const randomNumber = Math.floor(Math.random() * 4);
-  const winEmojis = ["😁", "💃🏽", "👏🏽", "😅", "😎", "🙌🏽"]
-  const randomNumberEmoji = Math.floor(Math.random() * 6);
-
-  resultDiv.innerHTML = `${convertToUp(userChoice)} ${randomWin[randomNumber]} ${convertToUp(computerChoice)}. You win! ${winEmojis[randomNumberEmoji]}`;
-
-  document.getElementById(userChoice).classList.add('win-border')
-  setTimeout(() => document.getElementById(userChoice).classList.remove('win-border'), 600);
-};
-
 // Output for user lose / computer win
 const lose = (userChoice, computerChoice) => {
   computerScore++;
@@ -74,16 +59,6 @@ const lose = (userChoice, computerChoice) => {
 
 };
 
-// Output for tie
-const tie = (userChoice, computerChoice) => {
-  const tieEmojis = ["🤯", "😱", "🙈", "🧐", "🙀", "🙃"];
-  const randomNumberEmoji = Math.floor(Math.random() * 6);
-  resultDiv.innerHTML = `${convertToUp(computerChoice)} matches ${convertToUp(userChoice)}. It's a tie! ${tieEmojis[randomNumberEmoji]}`;
-
-  document.getElementById(userChoice).classList.add('tie-border');
-  setTimeout(() => document.getElementById(userChoice).classList.remove('tie-border'), 600);
-};
-
 
 
 
@@ -92,22 +67,10 @@ const game = (userChoice) => {
   const computerChoice = getComputerChoice(userChoice);
 
   switch (userChoice + computerChoice) {
-    case "paperrock":
-    case "rockscissors":
-    case "scissorspaper":
-      win(userChoice, computerChoice);
-      break;
-
     case "rockpaper":
     case "scissorsrock":
     case "paperscissors":
       lose(userChoice, computerChoice);
-      break;
-
-    case "rockrock":
-    case "paperpaper":
-    case "scissorsscissors":
-      tie(userChoice, computerChoice);
       break;
   }
 
