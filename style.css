@@ -6,11 +6,15 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700,900');
 
 body{
+  height: 100vh;
   margin:0;
   padding:0;
   font-family: 'Lato', sans-serif;
   text-align: center;
   font-size: 1.2rem;
+  background-image: linear-gradient(to right bottom, #f8bb67, #ffb68b, #ffb8b2, #ffc1d3, #fbcdea);
+  background-repeat: no-repeat;
+
 }
 
 .container{
