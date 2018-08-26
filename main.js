@@ -12,11 +12,19 @@ const paperDiv = document.getElementById("paper");
 const scissorsDiv = document.getElementById("scissors");
 
 
-// Generating computer choice at random
-const getComputerChoice = () => {
-  const choiceList = ["rock", "paper", "scissors"];
-  const randomNumber = Math.floor(Math.random()*3);
-  return (choiceList[randomNumber]);
+// Generating computer choice
+const getComputerChoice = (userChoice) => {
+  switch(userChoice) {
+    case "rock":
+      return "paper";
+      break;
+    case "paper":
+      return "scissors";
+      break;
+    case "scissors":
+      return "rock";
+      break;
+  }
 };
 
 
@@ -81,7 +89,7 @@ const tie = (userChoice, computerChoice) => {
 
 // Comparing computerChoice and userChoice
 const game = (userChoice) => {
-  const computerChoice = getComputerChoice();
+  const computerChoice = getComputerChoice(userChoice);
 
   switch (userChoice + computerChoice) {
     case "paperrock":
