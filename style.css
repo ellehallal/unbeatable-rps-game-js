@@ -157,11 +157,11 @@ footer{
   padding-top: 2vh;
 }
 
-.icons{
-  max-width: 20px;
-  height: auto;
-  padding: 0 0.2vw;
+.fab{
+  color: #000000;
+  margin: 0 .5%;
 }
+
 
 
 /* MEDIA QUERIES */
