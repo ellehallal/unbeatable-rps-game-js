@@ -8,4 +8,4 @@ A spin-off of the Rock Paper Scissors Game ([repo](https://github.com/itsellej/r
 - JavaScript.
 
 ### Codepen: ###
-https://codepen.io/itsellej/full/oMyONQ/
+https://codepen.io/itsellej/full/dqGLMx/
