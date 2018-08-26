@@ -60,8 +60,6 @@ const lose = (userChoice, computerChoice) => {
 };
 
 
-
-
 // Comparing computerChoice and userChoice
 const game = (userChoice) => {
   const computerChoice = getComputerChoice(userChoice);
